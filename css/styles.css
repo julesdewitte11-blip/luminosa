@@ -35,6 +35,12 @@ body {
   justify-content: space-between;
 }
 
+h1 {
+  font-family: "salted", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -159,6 +165,7 @@ a {
 .panel {
   max-width: var(--maxw);
   margin: 0 auto;
+  margin-bottom: 2rem;
   padding: 0;
   width: 100%;
   max-width: 900px;
@@ -173,10 +180,9 @@ a {
 /* layout zoals voorbeeld: tekst links, foto/map rechts */
 .panel__inner--split {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
-  flex-direction: row;
+  flex-direction: column;
   gap: 18px;
+  align-items: stretch;
 }
 
 .panel__inner--about {
@@ -201,7 +207,7 @@ a {
   font-weight: 300;
   line-height: 1.6;
   font-size: 14px;
-  width: 60%;
+  width: 100%;
 }
 .panel__text p {
   margin: 0 0 12px;
@@ -217,6 +223,9 @@ a {
   padding: 10px;
   display: grid;
   place-items: center;
+  order: -1;
+  max-height: 400px;
+  overflow: hidden;
 }
 
 /* foto’s */
@@ -246,10 +255,23 @@ a {
 
 /* dotted lists zoals je voorbeeld (met “……”) */
 .lists {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
   margin-top: 6px;
+}
+
+.price-group {
+  flex: 1 1 280px;
+  min-width: 0;
+}
+
+.price-group h2 {
+  margin: 16px 0 8px 0;
+  font-family: var(--font-title);
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.95);
 }
 
 .list {
@@ -309,6 +331,10 @@ a {
   font-weight: 400;
   position: fixed;
   bottom: 0;
+
+  &.footer-pricelist {
+    position: relative;
+  }
 }
 
 /* ===== HOME (fullscreen video) ===== */
@@ -356,15 +382,32 @@ a {
   filter: drop-shadow(0 18px 30px rgba(0, 0, 0, 0.25));
 }
 
+.CTA-Button {
+  display: inline-block;
+  text-align: center;
+  margin-top: 24px;
+  padding: 18px 24px;
+  background: var(--c-strong);
+  color: #fff;
+  font-family: var(--font-body);
+  font-weight: 700;
+  border-radius: 12px;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 860px) {
   .panel__inner--split,
   .panel__inner--about {
     flex-direction: column;
-    align-items: center;
+    align-items: stretch;
   }
 
-  .pannel__text, .panel__text {
+  .lists {
+    flex-direction: column;
+  }
+
+  .pannel__text,
+  .panel__text {
     width: 100%;
   }
 
@@ -373,11 +416,9 @@ a {
   }
 
   .lists {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 4rem;
+    gap: 20px;
   }
+
   .media__img {
     max-height: 320px;
     object-fit: cover;
@@ -455,8 +496,14 @@ a {
   }
 
   .lists {
-    gap: 2rem;
+    gap: 16px;
   }
+
+  .price-group h2 {
+    font-size: 16px;
+    margin: 12px 0 6px 0;
+  }
+
   .media__map {
     margin-right: 100px;
     margin-left: auto;
