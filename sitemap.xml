@@ -2,19 +2,19 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Replace the luminosa-salon.be value below with your site's actual base URL (e.g. https://example.com) -->
   <!-- Each <loc> must contain a fully-qualified URL per the sitemap spec -->
-  <url>
-    <loc>luminosa-salon.be/</loc>
-  </url>
-  <url>
-    <loc>luminosa-salon.be/index.html</loc>
-  </url>
-  <url>
-    <loc>luminosa-salon.be/prijslijst.html</loc>
-  </url>
-  <url>
-    <loc>luminosa-salon.be/contact-locatie.html</loc>
-  </url>
-  <url>
-    <loc>luminosa-salon.be/over-mij.html</loc>
-  </url>
+    <url>
+      <loc>https://luminosa-salon.be/</loc>
+    </url>
+    <url>
+      <loc>https://luminosa-salon.be/index.html</loc>
+    </url>
+    <url>
+      <loc>https://luminosa-salon.be/prijslijst.html</loc>
+    </url>
+    <url>
+      <loc>https://luminosa-salon.be/contact-locatie.html</loc>
+    </url>
+    <url>
+      <loc>https://luminosa-salon.be/over-mij.html</loc>
+    </url>
 </urlset>
