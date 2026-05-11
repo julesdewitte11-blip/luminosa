@@ -233,8 +233,7 @@ a {
   max-width: 25rem;
   height: auto;
   display: block;
-
-  object-fit: fill;
+  object-fit: cover;
   border-radius: 12px;
 }
 
