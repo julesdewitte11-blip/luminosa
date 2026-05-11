@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap location (use the full URL)
+Sitemap: https://luminosa-salon.be/sitemap.xml
